@@ -3,16 +3,16 @@ import { FC } from "react";
 export const Header: FC = () => {
   return (
     <>
-      <div className="navbar bg-base-100 shadow">
+      <div className="navbar shadow">
         <div className="navbar-start p-4 text-2xl">
           <div className="text-yellow-300 bg-blue-900 p-2 text-lg">GU</div>
         </div>
-        <div className="navbar-center gap-8 font-bold  text-lg lg:flex">
+        <div className="navbar-center font-bold text-lg gap-4">
           <div>Home</div>
           <div> Men</div>
           <div>Women</div>
         </div>
-        <div className="navbar-end gap-8 p-4">
+        <div className="navbar-end gap-4 p-4">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
