@@ -5,7 +5,7 @@ export const Meta = () => {
   const router = useRouter();
   const { route } = router.query;
 
-  const dynamicRoute = (route) => {
+  const dynamicRoute = (route: string | string[] | undefined) => {
     if (router.pathname === "/") return `GU | Home`;
     if (route) return `GU | ${route}`;
     return "GU | Not Found";
