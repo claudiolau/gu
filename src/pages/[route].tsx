@@ -1,7 +1,8 @@
 import { CartContent, DefaultLayout, Header, LoginContent } from "@/components";
-import { EmptyContent } from "@/components/Content/EmptyContent";
 import { Footer } from "@/components/Footer";
+import { Meta } from "@/components/Meta";
 import { useRouter } from "next/router";
+import Custom404 from "./404";
 
 export default function MainRoute() {
   const router = useRouter();
@@ -10,6 +11,7 @@ export default function MainRoute() {
   if (route === "login") {
     return (
       <>
+        <Meta />
         <DefaultLayout>
           <Header />
           <LoginContent />
@@ -21,6 +23,7 @@ export default function MainRoute() {
   if (route === "cart") {
     return (
       <>
+        <Meta />
         <DefaultLayout>
           <Header />
           <CartContent />
@@ -29,5 +32,5 @@ export default function MainRoute() {
       </>
     );
   }
-  return <></>;
+  return <Custom404 />;
 }

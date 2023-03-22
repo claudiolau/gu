@@ -1,6 +1,10 @@
+import { ProductData } from "@/types";
 import { FC } from "react";
 
-export const Content: FC = () => {
+export const Content: FC<Partial<ProductData>> = (props) => {
+  {
+    console.log(props);
+  }
   return (
     <section className="flex-grow ">
       <nav className="flex flex-col items-center justify-between w-full relative max-w-7xl  mx-auto pt-8 pb-8 text-gray-900 ">

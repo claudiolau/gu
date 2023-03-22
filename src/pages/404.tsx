@@ -1,17 +1,14 @@
-import { Content, DefaultLayout, Header } from "@/components";
+import { DefaultLayout, Header, NotFoundLayout } from "@/components";
 import { Footer } from "@/components/Footer";
-import Products from "@/hook/products";
 import { Meta } from "@/components/Meta";
 
-export default function Home() {
-  const { data } = Products();
-
+export default function Custom404() {
   return (
     <>
       <Meta />
       <DefaultLayout>
         <Header />
-        <Content {...data} />
+        <NotFoundLayout />
         <Footer />
       </DefaultLayout>
     </>
