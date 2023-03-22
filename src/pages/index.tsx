@@ -1,7 +1,6 @@
-import { Content, DefaultLayout, Header } from "@/components";
-import { Footer } from "@/components/Footer";
-import Products from "@/hook/products";
+import { Content, DefaultLayout, Footer, Header } from "@/components";
 import { Meta } from "@/components/Meta";
+import Products from "@/hook/products";
 
 export default function Home() {
   const { data } = Products();

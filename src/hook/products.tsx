@@ -7,10 +7,14 @@ export default function Products() {
 
   // 2. Update state
   const fetchProducts = async (): Promise<void> => {
-    const fetchProducts = await fetch("https://api.storerestapi.com/products");
-    const resp = await fetchProducts.json();
+    try {
+      const fetchProducts = await fetch("https://fakestoreapi.com/products");
+      const resp = await fetchProducts.json();
 
-    setData(resp);
+      setData(resp.data);
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   // 3. update render
