@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { ProductData } from "@/types";
 import { FC } from "react";
 
-export const Content: FC<Partial<ProductData[]>> = (props) => {
+export const Content: FC<Partial<any>> = (props) => {
   const mockContent = Object.entries(props)
     .slice(0, 5)
     .map((entry) => entry[1]);
