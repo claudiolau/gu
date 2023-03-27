@@ -1,6 +1,5 @@
 import { ProductData } from "@/types";
 import { useState, useEffect } from "react";
-
 export default function Products() {
   // 1. Use the name state variable
   const [data, setData] = useState<ProductData>();
@@ -8,10 +7,17 @@ export default function Products() {
   // 2. Update state
   const fetchProducts = async (): Promise<void> => {
     try {
-      const fetchProducts = await fetch("https://fakestoreapi.com/products");
+      const fetchProducts = await fetch(
+        "https://api.escuelajs.co/api/v1/categories",
+        {
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const resp = await fetchProducts.json();
-
-      setData(resp.data);
+      setData(resp);
     } catch (e) {
       console.error(e);
     }
