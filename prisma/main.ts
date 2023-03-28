@@ -1,9 +1,8 @@
-import { PrismaClient } from "@prisma/client";
+import prisma from "./prisma-client";
+import { ProductSeed } from "./seed";
 
-const prisma = new PrismaClient();
-
-async function main() {
-  // ... you will write your Prisma Client queries here
+export async function main() {
+  await ProductSeed(prisma);
 }
 
 main()

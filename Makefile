@@ -10,7 +10,7 @@ setup: # Setup tools required for local development.
 	pnpm i 
 
 ### server ### 
-.PHONY: generate 
+.PHONY: pgen 
 generate: 
 	pnpx prisma generate 
 
@@ -23,3 +23,7 @@ ppush: #  Does not interact with or rely on migrations. The migrations table wil
 .PHONY:pstudio 
 pstudio: 
 	pnpx prisma studio
+
+.PHONY:pseed 
+pseed: 
+	npx prisma db seed
