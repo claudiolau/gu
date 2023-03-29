@@ -17,7 +17,7 @@ export const ProductData: ProductData[] = [
   {
     id: 2,
     name: "Electronics",
-    image: "https://api.lorem.space/image/watch?w=640&h=480&r=1749",migrate reset
+    image: "https://api.lorem.space/image/watch?w=640&h=480&r=1749",
     creationAt: "2023-03-28T16:14:32.000Z",
     updatedAt: "2023-03-28T16:14:32.000Z",
   },
