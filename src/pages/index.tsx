@@ -3,7 +3,7 @@ import { Meta } from "@/components/Meta";
 import Products from "@/hook/products";
 
 export default function Home() {
-  const { data } = Products();
+  const { data } = Products() as any;
 
   return (
     <>

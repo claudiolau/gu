@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { FC } from "react";
 
-export const Content: FC<Partial<any>> = (props) => {
+export const Content: FC = (props: any) => {
   const mockContent = Object.entries(props)
     .slice(0, 5)
-    .map((entry) => entry[1]);
+    .map((entry) => entry[1] || "") as any;
 
   return (
     <section className="flex-grow ">
