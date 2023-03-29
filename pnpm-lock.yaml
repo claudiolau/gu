@@ -20,9 +20,6 @@ specifiers:
 
 dependencies:
   '@prisma/client': 4.11.0_prisma@4.11.0
-  '@types/node': 18.15.3
-  '@types/react': 18.0.28
-  '@types/react-dom': 18.0.11
   daisyui: 2.51.4_j7yt3jd32cwenjqavrrga47yr4
   eslint: 8.36.0
   eslint-config-next: 13.2.4_j4766f7ecgqbon3u7zlxn5zszu
@@ -30,13 +27,16 @@ dependencies:
   next-auth: 4.20.1_ld2jel3hspngo3u5lti2kgl2sq
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  typescript: 5.0.2
 
 devDependencies:
+  '@types/node': 18.15.3
+  '@types/react': 18.0.28
+  '@types/react-dom': 18.0.11
   autoprefixer: 10.4.14_postcss@8.4.21
   postcss: 8.4.21
   prisma: 4.11.0
   tailwindcss: 3.2.7_postcss@8.4.21
+  typescript: 5.0.2
 
 packages:
 
@@ -303,17 +303,17 @@ packages:
 
   /@types/node/18.15.3:
     resolution: {integrity: sha512-p6ua9zBxz5otCmbpb5D3U4B5Nanw6Pk3PPyX05xnxbB/fRv71N7CPmORg7uAD5P70T0xmx1pzAx/FUfa5X+3cw==}
-    dev: false
+    dev: true
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
-    dev: false
+    dev: true
 
   /@types/react-dom/18.0.11:
     resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
     dependencies:
       '@types/react': 18.0.28
-    dev: false
+    dev: true
 
   /@types/react/18.0.28:
     resolution: {integrity: sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==}
@@ -321,11 +321,11 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
       csstype: 3.1.1
-    dev: false
+    dev: true
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
-    dev: false
+    dev: true
 
   /@typescript-eslint/parser/5.55.0_j4766f7ecgqbon3u7zlxn5zszu:
     resolution: {integrity: sha512-ppvmeF7hvdhUUZWSd2EEWfzcFkjJzgNQzVST22nzg958CR+sphy8A6K7LXQZd6V75m1VKjp+J4g/PCEfSCmzhw==}
@@ -681,7 +681,7 @@ packages:
 
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
-    dev: false
+    dev: true
 
   /daisyui/2.51.4_j7yt3jd32cwenjqavrrga47yr4:
     resolution: {integrity: sha512-TGYD2BQCduxkKbDALlaWWaUdi33tryUuO/MxxBtAmLJ9zKn04gF6xduMxbrAUesR4AFr6LZW187TqF2H5c1AoA==}
@@ -2500,7 +2500,6 @@ packages:
     resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
     engines: {node: '>=12.20'}
     hasBin: true
-    dev: false
 
   /unbox-primitive/1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
