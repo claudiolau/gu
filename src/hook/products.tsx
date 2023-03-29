@@ -1,8 +1,7 @@
-import { ProductData } from "@/types";
 import { useState, useEffect } from "react";
 export default function Products() {
   // 1. Use the name state variable
-  const [data, setData] = useState<ProductData>();
+  const [data, setData] = useState();
 
   // 2. Update state
   const fetchProducts = async (): Promise<void> => {
