@@ -4,6 +4,7 @@ export const getProductURI = new URL("/api/product", baseUrl);
 
 export const getProducts = async () => {
   try {
+    console.log(`${process.env.basePath}`);
     const data = await fetch(getProductURI, {
       mode: "cors",
       headers: {
