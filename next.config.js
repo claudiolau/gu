@@ -5,7 +5,7 @@ const nextConfig = {
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
   },
 
-  basePath: "https://gu-fawn.vercel.app/",
+  basePath: "https://gu-fawn.vercel.app",
 
   async headers() {
     return [
