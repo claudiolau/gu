@@ -1,22 +1,16 @@
+import { getProducts, getProductURI } from "@/service";
 import { useState, useEffect } from "react";
+import { ProductData } from "../../prisma/data";
+
 export default function Products() {
   // 1. Use the name state variable
-  const [data, setData] = useState();
+  const [data, setData] = useState<ProductData[] | []>();
 
   // 2. Update state
+
   const fetchProducts = async (): Promise<void> => {
     try {
-      const fetchProducts = await fetch(
-        "https://api.escuelajs.co/api/v1/categories",
-        {
-          mode: "cors",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const resp = await fetchProducts.json();
-      setData(resp);
+      setData(await getProducts());
     } catch (e) {
       console.error(e);
     }
@@ -29,6 +23,7 @@ export default function Products() {
     // cleanup function
     return () => {};
   }, []);
+  // ...
 
   return { data, setData };
 }

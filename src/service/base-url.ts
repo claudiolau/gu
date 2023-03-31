@@ -1,1 +1,1 @@
-export const baseUrl: String = `${process.env.NEXTAUTH_URL}`;
+export const baseUrl: string = `${process.env.NEXTAUTH_URL}` || "";
