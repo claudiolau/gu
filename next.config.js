@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ["https://api.escuelajs.co/api/v1/categories"],
+  env: {
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
   },
 };
 
