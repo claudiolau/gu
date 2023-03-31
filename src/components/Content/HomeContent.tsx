@@ -1,10 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import { FC } from "react";
+import { ProductData } from "../../../prisma/data";
 
-export const Content: FC = (props: any) => {
+export const HomeContent: FC<ProductData[]> = (props) => {
   const mockContent = Object.entries(props)
     .slice(0, 5)
-    .map((entry) => entry[1] || "") as any;
+    .map((entry) => entry[1] || "");
 
   return (
     <section className="flex-grow ">
