@@ -11,7 +11,7 @@ export const HomeContent: FC<ProductData[]> = (props) => {
     <section className="flex-grow ">
       <nav className="flex flex-col items-center justify-between w-full relative max-w-7xl  mx-auto pt-8 pb-8 text-gray-900 ">
         <div className="flex flex-col w-full lg:flex-row p-4">
-          <div className="grid h-32 card rounded-box mr-4">
+          <div className="grid card rounded-box">
             <img
               src={String(mockContent[0]?.image)}
               className="rounded"

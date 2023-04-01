@@ -3,7 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   env: {
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    BASE_URL: process.env.BASE_URL,
   },
+
   async headers() {
     return [
       {
