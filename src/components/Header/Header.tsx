@@ -1,59 +1,106 @@
-import Link from "next/link";
-import { FC } from "react";
+/* eslint-disable @next/next/no-html-link-for-pages */
+import { ProfileIcon, CartIcon } from "@/assets";
+import { FC, useState } from "react";
 
 export const Header: FC = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
-    <>
-      <div className="navbar shadow">
-        <div className="navbar-start p-4 text-2xl">
-          <div className="text-yellow-300 bg-blue-900 p-2 text-lg">GU</div>
-        </div>
-        <div className="navbar-center font-bold text-lg gap-4">
-          <div>
-            <Link href="/">Home</Link>
+    <div className="flex items-center justify-between border-gray-400 ">
+      <div className="text-yellow-300 bg-blue-900 p-4 m-4 text-lg">GU</div>
+      <ul className=" MOBILE-MENU flex flex-row lg:hidden space-x-4">
+        <li className="   border-gray-400 my-8 uppercase">
+          <a href="/cart">
+            <ProfileIcon />
+          </a>
+        </li>
+        <li className="   border-gray-400 my-8 uppercase m-4">
+          <a href="/cart">
+            <CartIcon />
+          </a>
+        </li>
+      </ul>
+      <nav className="p-4">
+        <section className="MOBILE-MENU flex flex-row lg:hidden">
+          <div
+            className="HAMBURGER-ICON space-y-2 "
+            onClick={() => setIsNavOpen((prev) => !prev)}
+          >
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
           </div>
-          <div> Men</div>
-          <div>Women</div>
-        </div>
-        <div className="navbar-end gap-4 p-4">
-          <div>
-            <Link href="/login">
+
+          <div
+            className={`${
+              isNavOpen ? "block" : "hidden"
+            } absolute top-4 right-4 w-full z-40 rounded-full`}
+            onClick={() => setIsNavOpen((prev) => !prev)}
+          >
+            <div
+              className="absolute top-0 right-0 px-8 py-8"
+              onClick={() => setIsNavOpen(false)}
+            >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
+                className="h-8 w-8 text-gray-600"
                 viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                />
-              </svg>
-            </Link>
-          </div>
-          <div>
-            <Link href="/cart">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-                />
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
-            </Link>
+            </div>
+            <ul className="relative flex flex-col items-center justify-between min-h-[250px] p-4 bg-white z-4">
+              <li className="border-gray-400 uppercase">
+                <a href="/">Home</a>
+              </li>
+              <li className="border-gray-400  uppercase">
+                <a href="/clothing">Clothing</a>
+              </li>
+              <li className="border-gray-400 uppercase">
+                <a href="/electronics">Electronics</a>
+              </li>
+              <li className="border-gray-400 uppercase">
+                <a href="/furniture">Furniture</a>
+              </li>
+              <li className="border-gray-400  uppercase">
+                <a href="/furniture">Shoes</a>
+              </li>
+              <li className="border-gray-400  uppercase">
+                <a href="/others">Others</a>
+              </li>
+              <li className=" border-gray-400 uppercase">
+                <a href="/cart">cart</a>
+              </li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </>
+        </section>
+
+        <ul className="DESKTOP-MENU hidden lg:flex space-x-8 ">
+          <li className="border-b border-gray-400 my-8 uppercase">
+            <a href="/">Home</a>
+          </li>
+          <li className="border-b border-gray-400 my-8 uppercase">
+            <a href="/clothing">Clothing</a>
+          </li>
+          <li className="border-b border-gray-400 my-8 uppercase">
+            <a href="/electronics">Electronics</a>
+          </li>
+          <li className="border-b border-gray-400 my-8 uppercase">
+            <a href="/furniture">Furniture</a>
+          </li>
+          <li className="border-b border-gray-400 my-8 uppercase">
+            <a href="/furniture">Shoes</a>
+          </li>
+          <li className="border-b border-gray-400 my-8 uppercase">
+            <a href="/others">Others</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };

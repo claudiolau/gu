@@ -17,7 +17,7 @@ export const HomeContent: FC<ProductData[]> = (props) => {
               className="rounded"
               alt="0"
             />
-            <span> {mockContent[0]?.name}</span>
+            <span className="font-bold"> {mockContent[0]?.name}</span>
           </div>
           <div className=" p-4" />
           <div className="grid card rounded-box">
@@ -26,7 +26,7 @@ export const HomeContent: FC<ProductData[]> = (props) => {
               className="rounded"
               alt="1"
             />
-            <span> {mockContent[1]?.name}</span>
+            <span className="font-bold p-4"> {mockContent[1]?.name}</span>
           </div>
         </div>
         <div className="flex flex-col p-4">
@@ -36,7 +36,7 @@ export const HomeContent: FC<ProductData[]> = (props) => {
               className="rounded"
               alt="2"
             />
-            <span> {mockContent[2]?.name}</span>
+            <span className="font-bold p-4"> {mockContent[2]?.name}</span>
           </div>
         </div>
         <div className="flex flex-col w-full lg:flex-row p-4">
@@ -46,7 +46,7 @@ export const HomeContent: FC<ProductData[]> = (props) => {
               className="rounded"
               alt="3"
             />
-            <span> {mockContent[3]?.name}</span>
+            <span className="font-bold p-4"> {mockContent[3]?.name}</span>
           </div>
           <div className=" p-4" />
           <div className="grid card rounded-box">
@@ -55,7 +55,7 @@ export const HomeContent: FC<ProductData[]> = (props) => {
               className="rounded"
               alt="4"
             />
-            <span> {mockContent[4]?.name}</span>
+            <span className="font-bold p-4"> {mockContent[4]?.name}</span>
           </div>
         </div>
       </nav>
