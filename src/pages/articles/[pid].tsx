@@ -1,13 +1,12 @@
+"use client";
+
 import { Meta, DefaultLayout, Header, Footer } from "@/components";
 import { ArticleContent } from "@/components/Content/ArticleContent";
-import GetArticles from "@/hook/get-articles";
-import { useRouter } from "next/router";
+import useArticles from "@/hook/use-articles";
 
-export default function Article() {
-  const router = useRouter();
-  const { data } = GetArticles(router.query);
+export default function Article(props: { params: string }) {
+  const { data } = useArticles(props.params);
 
-  console.log(data);
   return (
     <>
       <Meta />
@@ -18,4 +17,10 @@ export default function Article() {
       </DefaultLayout>
     </>
   );
+}
+
+export function getServerSideProps(context) {
+  return {
+    props: { params: context.params },
+  };
 }

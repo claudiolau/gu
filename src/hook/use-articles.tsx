@@ -1,14 +1,18 @@
+"use client";
+
 import { baseUrl } from "@/service/base-url";
 import { useState, useEffect } from "react";
 import { ProductData } from "../../prisma/data";
 
-export default function GetArticles(props) {
+export default function useArticles(props: string) {
   // 1. Use the name state variable
+  const { pid } = props;
   const [data, setData] = useState<ProductData[] | []>();
 
   const fetchArticles = async () => {
     try {
-      const pathParams = `/api/articles/clothes`;
+      const pathParams = `/api/articles/` + pid;
+
       const getArticlesURI = new URL(pathParams, baseUrl);
       const data = await fetch(getArticlesURI, {
         mode: "cors",
@@ -17,6 +21,7 @@ export default function GetArticles(props) {
         },
         method: "GET",
       });
+
       const resp = await data.json();
 
       setData(resp);

@@ -8,10 +8,13 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const queryParam = Capitalize(req.query.pid as string);
+    // generate-dynamic-query-on-demand
+    const queryParam = Capitalize(String(req.query.pid) as string);
+
     const data = await prisma.product.findMany({
       where: { name: queryParam },
     });
+
     res.status(200).send(data);
   } catch (error) {
     console.error(error);

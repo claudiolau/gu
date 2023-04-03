@@ -2,7 +2,7 @@ import { getProducts, getProductURI } from "@/service";
 import { useState, useEffect } from "react";
 import { ProductData } from "../../prisma/data";
 
-export default function Products() {
+export default function useProducts() {
   // 1. Use the name state variable
   const [data, setData] = useState<ProductData[] | []>();
 
