@@ -5,6 +5,37 @@ import { FC, useState } from "react";
 export const Header: FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
+  const ListLinks = () => {
+    return (
+      <>
+        <li className="border-gray-400 uppercase">
+          <a href="/">Home</a>
+        </li>
+        <li className="border-gray-400  uppercase">
+          <a href="/articles/clothes">Clothes</a>
+        </li>
+        <li className="border-gray-400 uppercase">
+          <a href="/articles/electronics">Electronics</a>
+        </li>
+        <li className="border-gray-400 uppercase">
+          <a href="/articles/furniture">Furniture</a>
+        </li>
+        <li className="border-gray-400  uppercase">
+          <a href="/articles/furniture">Shoes</a>
+        </li>
+        <li className="border-gray-400  uppercase">
+          <a href="/articles/others">Others</a>
+        </li>
+        <li className=" border-gray-400 uppercase">
+          <a href="/login">Login</a>
+        </li>
+        <li className=" border-gray-400 uppercase">
+          <a href="/cart">Cart</a>
+        </li>
+      </>
+    );
+  };
+
   return (
     <div className="flex items-center justify-between border-gray-400 ">
       <div className="text-yellow-300 bg-blue-900 p-4 m-4 text-lg">GU</div>
@@ -55,50 +86,13 @@ export const Header: FC = () => {
               </svg>
             </div>
             <ul className="relative flex flex-col items-center justify-between min-h-[250px] p-4 bg-white z-4">
-              <li className="border-gray-400 uppercase">
-                <a href="/">Home</a>
-              </li>
-              <li className="border-gray-400  uppercase">
-                <a href="/clothing">Clothing</a>
-              </li>
-              <li className="border-gray-400 uppercase">
-                <a href="/electronics">Electronics</a>
-              </li>
-              <li className="border-gray-400 uppercase">
-                <a href="/furniture">Furniture</a>
-              </li>
-              <li className="border-gray-400  uppercase">
-                <a href="/furniture">Shoes</a>
-              </li>
-              <li className="border-gray-400  uppercase">
-                <a href="/others">Others</a>
-              </li>
-              <li className=" border-gray-400 uppercase">
-                <a href="/cart">cart</a>
-              </li>
+              <ListLinks />
             </ul>
           </div>
         </section>
 
         <ul className="DESKTOP-MENU hidden lg:flex space-x-8 ">
-          <li className="border-b border-gray-400 my-8 uppercase">
-            <a href="/">Home</a>
-          </li>
-          <li className="border-b border-gray-400 my-8 uppercase">
-            <a href="/clothing">Clothing</a>
-          </li>
-          <li className="border-b border-gray-400 my-8 uppercase">
-            <a href="/electronics">Electronics</a>
-          </li>
-          <li className="border-b border-gray-400 my-8 uppercase">
-            <a href="/furniture">Furniture</a>
-          </li>
-          <li className="border-b border-gray-400 my-8 uppercase">
-            <a href="/furniture">Shoes</a>
-          </li>
-          <li className="border-b border-gray-400 my-8 uppercase">
-            <a href="/others">Others</a>
-          </li>
+          <ListLinks />
         </ul>
       </nav>
     </div>
