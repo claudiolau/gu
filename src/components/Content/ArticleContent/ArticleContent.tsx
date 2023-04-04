@@ -3,7 +3,7 @@ import { ProductData } from "../../../../prisma/data";
 import { v4 as uuidv4 } from "uuid";
 
 export const ArticleContent: FC<ProductData[]> = (props) => {
-  const BuyCard = (props) => {
+  const BuyCard = (props: { image: string | undefined }[]) => {
     return (
       <>
         <div className="card w-96 bg-base-100 shadow-xl">
@@ -27,7 +27,7 @@ export const ArticleContent: FC<ProductData[]> = (props) => {
   };
 
   // fix issue on key props
-  const GenerateGrid = (props, cards: Number) => {
+  const GenerateGrid = (props: any) => {
     const genProps = Array(12).fill(props);
 
     return (

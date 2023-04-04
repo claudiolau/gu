@@ -39,7 +39,7 @@ export default function useArticles(props: string) {
     fetchArticles();
     // cleanup function
     return () => {};
-  }, []);
+  }, [fetchArticles]);
   // ...
 
   return { data, setData };
