@@ -39,7 +39,8 @@ export default function useArticles(props: string) {
     fetchArticles();
     // cleanup function
     return () => {};
-  }, [fetchArticles]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   // ...
 
   return { data, setData };
