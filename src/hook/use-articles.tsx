@@ -6,6 +6,8 @@ import { ProductData } from "../../prisma/data";
 
 export default function useArticles(props: string) {
   // 1. Use the name state variable
+
+  //@ts-ignore
   const { pid } = props;
   const [data, setData] = useState<ProductData[] | []>();
 

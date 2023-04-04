@@ -5,7 +5,7 @@ import { ArticleContent } from "@/components/Content/ArticleContent";
 import useArticles from "@/hook/use-articles";
 
 export default function Article(props: { params: string }) {
-  const { data } = useArticles(props.params);
+  const { data } = useArticles(props.params as any);
 
   return (
     <>
