@@ -12,14 +12,14 @@ export default function Article(props: { params: string }) {
       <Meta />
       <DefaultLayout>
         <Header />
-        <ArticleContent />
+        <ArticleContent {...(data || [])} />
         <Footer />
       </DefaultLayout>
     </>
   );
 }
 
-export function getServerSideProps(context) {
+export function getServerSideProps(context: { params: string }) {
   return {
     props: { params: context.params },
   };
