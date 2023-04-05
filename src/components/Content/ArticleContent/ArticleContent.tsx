@@ -12,7 +12,7 @@ export const ArticleContent: FC<ProductData[]> = (props) => {
           </figure>
           <div className="card-body">
             <h2 className="card-title">
-              Shoes!
+              {props[0]?.name}
               <div className="badge badge-secondary">NEW</div>
             </h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
@@ -29,6 +29,9 @@ export const ArticleContent: FC<ProductData[]> = (props) => {
   // fix issue on key props
   const GenerateGrid = (props: any) => {
     const genProps = Array(12).fill(props);
+    {
+      console.log(props);
+    }
 
     return (
       <>
@@ -44,6 +47,7 @@ export const ArticleContent: FC<ProductData[]> = (props) => {
   };
   return (
     <>
+      {console.log(props)}
       <div className="flex-grow">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full relative max-w-7xl mx-auto pt-8 pb-8 text-gray-900">
           <GenerateGrid {...props} />
