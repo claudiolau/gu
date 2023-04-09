@@ -17,7 +17,7 @@ export const Header: FC = () => {
         <li className="border-gray-400 uppercase">
           <a href="/articles/electronics">Electronics</a>
         </li>
-        <li className="border-gray-400 uppercase">
+        {/* <li className="border-gray-400 uppercase">
           <a href="/articles/furniture">Furniture</a>
         </li>
         <li className="border-gray-400  uppercase">
@@ -25,7 +25,7 @@ export const Header: FC = () => {
         </li>
         <li className="border-gray-400  uppercase">
           <a href="/articles/others">Others</a>
-        </li>
+        </li> */}
         <li className=" border-gray-400 uppercase">
           <a href="/login">Login</a>
         </li>
