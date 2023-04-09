@@ -12,7 +12,7 @@ export const Header: FC = () => {
           <a href="/">Home</a>
         </li>
         <li className="border-gray-400  uppercase">
-          <a href="/articles/clothes">Clothes</a>
+          <a href="/articles/clothing">Clothing</a>
         </li>
         <li className="border-gray-400 uppercase">
           <a href="/articles/electronics">Electronics</a>

@@ -9,10 +9,19 @@ export default async function handler(
 ) {
   try {
     // generate-dynamic-query-on-demand
-    const queryParam = Capitalize(String(req.query.pid) as string);
+    const queryParam = req.query.pid as string;
 
     const data = await prisma.product.findMany({
-      where: { name: queryParam },
+      where: {
+        OR: [
+          { category: queryParam },
+          {
+            category: {
+              endsWith: queryParam,
+            },
+          },
+        ],
+      },
     });
 
     res.status(200).send(data);

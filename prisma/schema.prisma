@@ -12,15 +12,18 @@ datasource db {
 
 model Product{
   id Int @id
-  name String 
-  image String 
-  creationAt String 
-  updatedAt String 
+  title String
+  price Decimal
+  description String
+  category String
+  image String
+  rating Json
 
-  @@unique([id, name, image])
-
+  @@unique([id, title, image])
   @@map("product")
 } 
+
+// TO BE DECIDED 
 
  model User {
   id    Int     @id @default(autoincrement())
