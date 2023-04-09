@@ -4,7 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 
 export const ArticleContent: FC<ProductData[]> = (props) => {
   const BuyCard = (props: { image: string | undefined }[]) => {
-    console.log(props);
     return (
       <>
         <div className="card w-96 bg-base-100 shadow-xl">
@@ -13,7 +12,6 @@ export const ArticleContent: FC<ProductData[]> = (props) => {
           </figure>
           <div className="card-body">
             <h2 className="card-title">
-              {/* {props[0]?.name} */}
               <div className="badge badge-secondary">NEW</div>
             </h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
