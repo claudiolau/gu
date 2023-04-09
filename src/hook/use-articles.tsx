@@ -25,7 +25,7 @@ export default function useArticles(props: string) {
       });
 
       const resp = await data.json();
-
+      console.log(data);
       setData(resp);
     } catch (e) {
       console.error(e);
