@@ -23,7 +23,7 @@ export const LoginContent: FC = () => {
                     className="rounded bg-black text-white p-4 max-w-md"
                     onClick={() => signIn()}
                   >
-                    Login In
+                    Login
                   </button>
                 </div>
 

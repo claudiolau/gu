@@ -1,3 +1,4 @@
+import { Capitalize } from "@/utils/capitalize";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
@@ -8,6 +9,8 @@ export const Meta = () => {
   const dynamicRoute = (route: string | string[] | undefined) => {
     if (router.pathname === "/") return `GU | Home`;
     if (route) return `GU | ${route}`;
+    // dynamic routes
+    if (!route) return `GU | ${Capitalize(router.query.pid as string)}`;
     return "GU | Not Found";
   };
 
