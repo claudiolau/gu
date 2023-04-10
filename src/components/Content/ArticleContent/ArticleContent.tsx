@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { ProductData } from "../../../../prisma/data";
 import { v4 as uuidv4 } from "uuid";
+import { IProduct } from "../../../../prisma/data";
 
-export const ArticleContent: FC<ProductData[]> = (props) => {
+export const ArticleContent: FC<IProduct[]> = (props) => {
   const BuyCard = (props: { image: string | undefined }[]) => {
     return (
       <>

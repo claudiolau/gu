@@ -30,7 +30,7 @@ export const Footer: FC = () => {
       </div>
       <div className="bg-[#f4f4f4]">
         <footer className="footer p-4 border-t flex items-center justify-between w-full mx-auto relative max-w-7xl">
-          <p>Copyright © G.U. CO., Ltd. All rights reserved</p>
+          <p>Copyright © GU 2023</p>
           <div className="md:place-self-center md:justify-self-end">
             <div className="grid grid-flow-col gap-4">
               <Link href="https://twitter.com/">
