@@ -1,4 +1,4 @@
-export type ProductData = {
+export type IProduct = {
   id: number;
   title: string;
   price: number;
@@ -11,7 +11,7 @@ export type ProductData = {
   };
 };
 
-export const ProductData = [
+export const ProductData: IProduct[] = [
   {
     id: 1,
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",

@@ -1,2 +1,2 @@
 export * from "./product-data";
-export * from "@prisma/client";
+export * from "./product-data";

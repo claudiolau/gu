@@ -1,4 +1,6 @@
-export const CartIcon = () => {
+import { SVGProps } from "react";
+
+export const CartIcon = (): SVGProps<SVGSVGElement> => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

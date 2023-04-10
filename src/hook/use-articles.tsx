@@ -2,14 +2,14 @@
 
 import { baseUrl } from "@/service/base-url";
 import { useState, useEffect } from "react";
-import { ProductData } from "../../prisma/data";
+import { IProduct } from "../../prisma/data";
 
 export default function useArticles(props: string) {
   // 1. Use the name state variable
 
   //@ts-ignore
   const { pid } = props;
-  const [data, setData] = useState<ProductData[] | []>();
+  const [data, setData] = useState<IProduct[] | []>();
 
   const fetchArticles = async () => {
     try {
@@ -25,14 +25,12 @@ export default function useArticles(props: string) {
       });
 
       const resp = await data.json();
-      console.log(data);
+      // 2. Update state
       setData(resp);
     } catch (e) {
       console.error(e);
     }
   };
-
-  // 2. Update state
 
   // 3. update render
   useEffect(() => {

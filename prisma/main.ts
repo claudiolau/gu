@@ -1,4 +1,4 @@
-import prisma from "./prisma-client";
+import { prisma } from "./prisma-client";
 import { ProductSeed } from "./seed";
 
 export async function main() {
