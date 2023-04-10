@@ -1,6 +1,4 @@
-import { SVGProps } from "react";
-
-export const ProfileIcon = (): SVGProps<SVGSVGElement> => {
+export const ProfileIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
