@@ -4,7 +4,7 @@ export const Footer: FC = () => {
   return (
     <>
       <div className="bg-[#f4f4f4]">
-        <footer className="footer p-10  flex items-center justify-between w-full mx-auto relative max-w-7xl">
+        <footer className="footer p-10 flex items-center justify-between w-full mx-auto relative max-w-7xl">
           <div>
             <span className="footer-title">Services</span>
             <a className="link link-hover">Branding</a>

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { ProfileIcon, CartIcon } from "@/assets";
+import { HamburgerIcon } from "@/assets/HamburgerIcon";
 import { FC, useState } from "react";
 
 export const Header: FC = () => {
@@ -17,15 +18,6 @@ export const Header: FC = () => {
         <li className="border-gray-400 uppercase">
           <a href="/articles/electronics">Electronics</a>
         </li>
-        {/* <li className="border-gray-400 uppercase">
-          <a href="/articles/furniture">Furniture</a>
-        </li>
-        <li className="border-gray-400  uppercase">
-          <a href="/articles/furniture">Shoes</a>
-        </li>
-        <li className="border-gray-400  uppercase">
-          <a href="/articles/others">Others</a>
-        </li> */}
         <li className=" border-gray-400 uppercase">
           <a href="/login">Login</a>
         </li>
@@ -69,21 +61,10 @@ export const Header: FC = () => {
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
             <div
-              className="absolute top-0 right-0 px-8 py-8"
+              className="absolute top-0 right-0 z-[4]"
               onClick={() => setIsNavOpen(false)}
             >
-              <svg
-                className="h-8 w-8 text-gray-600"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
+              <HamburgerIcon />
             </div>
             <ul className="relative flex flex-col items-center justify-between min-h-[250px] p-4 bg-white z-4">
               <ListLinks />

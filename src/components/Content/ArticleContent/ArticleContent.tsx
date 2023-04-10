@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { IProduct } from "../../../../prisma/data";
 
 export const ArticleContent: FC<IProduct[]> = (props) => {
-  const BuyCard = (props: { image: string | undefined }[]) => {
+  const BuyCard = (props: { description: string }[]) => {
     return (
       <>
         <div className="card w-96 bg-base-100 shadow-xl">
@@ -14,7 +14,7 @@ export const ArticleContent: FC<IProduct[]> = (props) => {
             <h2 className="card-title">
               <div className="badge badge-secondary">NEW</div>
             </h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <p>{props[0] && props[0]?.description}</p>
             <div className="card-actions justify-end">
               <div className="badge badge-outline">Fashion</div>
               <div className="badge badge-outline">Products</div>
@@ -46,7 +46,6 @@ export const ArticleContent: FC<IProduct[]> = (props) => {
   };
   return (
     <>
-      {console.log(props)}
       <div className="flex-grow">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full relative max-w-7xl mx-auto pt-8 pb-8 text-gray-900">
           <GenerateGrid {...props} />
