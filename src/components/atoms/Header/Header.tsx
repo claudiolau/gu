@@ -1,29 +1,35 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { ProfileIcon, CartIcon } from "@/assets";
 import { HamburgerIcon } from "@/assets/HamburgerIcon";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { FC, useState } from "react";
 
 export const Header: FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const { asPath } = useRouter();
 
   const ListLinks = () => {
+    const links = [
+      { href: "/", label: "Home" },
+      { href: "/articles/clothing", label: "Clothing" },
+      { href: "/articles/electronics", label: "Electronics" },
+      { href: "/login", label: "Login" },
+      { href: "/cart", label: "Cart" },
+    ];
+
     return (
       <>
-        <li className="border-gray-400 uppercase">
-          <a href="/">Home</a>
-        </li>
-        <li className="border-gray-400  uppercase">
-          <a href="/articles/clothing">Clothing</a>
-        </li>
-        <li className="border-gray-400 uppercase">
-          <a href="/articles/electronics">Electronics</a>
-        </li>
-        <li className=" border-gray-400 uppercase">
-          <a href="/login">Login</a>
-        </li>
-        <li className=" border-gray-400 uppercase">
-          <a href="/cart">Cart</a>
-        </li>
+        {links.map(({ href, label }) => (
+          <li
+            key={href}
+            className={`border-gray-400 uppercase ${
+              asPath === href ? "underline" : ""
+            }`}
+          >
+            <Link href={href}>{label}</Link>
+          </li>
+        ))}
       </>
     );
   };
