@@ -71,7 +71,6 @@ export const Header: FC = () => {
             </ul>
           </div>
         </section>
-
         <ul className="DESKTOP-MENU hidden lg:flex space-x-8 ">
           <ListLinks />
         </ul>
