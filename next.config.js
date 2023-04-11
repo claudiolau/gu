@@ -5,6 +5,9 @@ const nextConfig = {
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
     BASE_URL: process.env.BASE_URL,
   },
+  images: {
+    domains: ["www.soph.net"],
+  },
 
   async headers() {
     return [
