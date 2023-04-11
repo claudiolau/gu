@@ -1,6 +1,6 @@
-import { getProducts, getProductURI } from "@/service";
+import { getProducts } from "@/service";
+import { IProduct } from "@prisma/data";
 import { useState, useEffect } from "react";
-import { IProduct } from "../../prisma/data";
 
 export default function useProducts() {
   // 1. Use the name state variable

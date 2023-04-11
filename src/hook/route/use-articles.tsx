@@ -1,13 +1,10 @@
-"use client";
-
 import { baseUrl } from "@/service/base-url";
+import { IProduct } from "@prisma/data";
 import { useState, useEffect } from "react";
-import { IProduct } from "../../prisma/data";
 
-export default function useArticles(props: string) {
+export default function useArticles(props: { pid: string }) {
   // 1. Use the name state variable
 
-  //@ts-ignore
   const { pid } = props;
   const [data, setData] = useState<IProduct[] | []>();
 

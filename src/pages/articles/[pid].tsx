@@ -2,17 +2,16 @@
 
 import { Meta, DefaultLayout, Header, Footer } from "@/components";
 import { ArticleContent } from "@/components/Content/ArticleContent";
-import useArticles from "@/hook/use-articles";
+import useArticles from "@/hook/route/use-articles";
 
 export default function Article(props: { params: string }) {
-  const { data } = useArticles(props.params as any);
-
+  const { data = [] } = useArticles(props.params as any);
   return (
     <>
       <Meta />
       <DefaultLayout>
         <Header />
-        <ArticleContent {...(data || [])} />
+        <ArticleContent {...data} />
         <Footer />
       </DefaultLayout>
     </>
