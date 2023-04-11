@@ -1,12 +1,12 @@
 import { baseUrl } from "@/service/base-url";
-import { IProduct } from "@prisma/data";
+import { Product } from "@prisma/client";
 import { useState, useEffect } from "react";
 
 export default function useArticles(props: { pid: string }) {
   // 1. Use the name state variable
 
   const { pid } = props;
-  const [data, setData] = useState<IProduct[] | []>();
+  const [data, setData] = useState<Product[] | []>();
 
   const fetchArticles = async () => {
     try {
