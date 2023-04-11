@@ -7,7 +7,6 @@ export const HomeContent: FC<Product[]> = (props) => {
   // const mockContent = Object.entries(props)
   //   .slice(0, 5)
   //   .map((entry) => entry[1] || "")
-
   return (
     <section className="flex-grow ">
       <div className="flex flex-col items-center justify-between w-full relative max-w-7xl mx-auto pt-8 pb-8 text-gray-900">

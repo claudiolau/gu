@@ -1,8 +1,6 @@
-"use client";
-
 import { Meta, DefaultLayout, Header, Footer } from "@/components";
 import { ArticleContent } from "@/components/molecule/Content/ArticleContent";
-import useArticles from "@/hook/route/use-articles";
+import useArticles from "@/hook/use-articles";
 
 export default function Article(props: { params: string }) {
   const { data = [] } = useArticles(props.params as any);

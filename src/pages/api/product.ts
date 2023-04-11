@@ -3,6 +3,7 @@
 import { Product } from "@prisma/client";
 import { prisma } from "@prisma/index";
 import type { NextApiRequest, NextApiResponse } from "next";
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
