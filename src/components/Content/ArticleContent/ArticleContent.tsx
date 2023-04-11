@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { IProduct } from "../../../../prisma/data";
 
 export const ArticleContent: FC<IProduct[]> = (props) => {
-  const BuyCard = (props: { description: string }[]) => {
+  const BuyCard = (props: { description: string; image: string }[]) => {
     return (
       <>
         <div className="card w-96 bg-base-100 shadow-xl">
