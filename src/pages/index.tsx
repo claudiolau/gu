@@ -1,5 +1,4 @@
-import { DefaultLayout, Footer, Header, HomeContent } from "@/components";
-import { Meta } from "@/components/atoms/Meta";
+import { DefaultLayout, Footer, Header, HomeContent, Meta } from "@/components";
 import Products from "@/hook/use-product";
 
 export default function Home() {

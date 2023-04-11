@@ -1,6 +1,10 @@
-import { DefaultLayout, Header, NotFoundLayout } from "@/components";
-import { Footer } from "@/components/atoms/Footer";
-import { Meta } from "@/components/atoms/Meta";
+import {
+  DefaultLayout,
+  Footer,
+  Header,
+  Meta,
+  NotFoundLayout,
+} from "@/components";
 
 export default function Custom404() {
   return (
