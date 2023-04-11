@@ -28,9 +28,6 @@ export const ArticleContent: FC<IProduct[]> = (props) => {
   // fix issue on key props
   const GenerateGrid = (props: any) => {
     const genProps = Array(12).fill(props);
-    {
-      console.log(props);
-    }
 
     return (
       <>

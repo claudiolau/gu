@@ -1,8 +1,24 @@
 # gu
 
+# Directory
+
+    .
+    ├── build                   # Compiled files (alternatively `dist`)
+    ├── prisma                   # Documentation files (alternatively `doc`)
+    ├── src                     # Source files (alternatively `lib` or `app`, next.js 13 app directory is experimental)
+    └── README.md
+
 # Getting Started
 
+For local development, run the following commands
+
 `pnpm i`
+`docker compose up`
+`pnpm run dev`
+
+# Contributing
+
+For ease of development, please include bash script in the makefile to make scripting easier
 
 # Maintenance
 
