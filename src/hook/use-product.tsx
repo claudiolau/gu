@@ -1,29 +1,33 @@
-import { getProducts, getProductURI } from "@/service";
+import { getProductURI } from "@/service";
+import { Product } from "@prisma/client";
 import { useState, useEffect } from "react";
-import { IProduct } from "../../prisma/data";
 
 export default function useProducts() {
-  // 1. Use the name state variable
-  const [data, setData] = useState<IProduct[] | []>();
-
-  // 2. Update state
+  const [data, setData] = useState<Product[]>([]);
 
   const fetchProducts = async (): Promise<void> => {
     try {
-      setData(await getProducts());
-    } catch (e) {
-      console.error(e);
+      const response = await fetch(getProductURI, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await response.json();
+      setData(data);
+    } catch (error) {
+      console.error(error);
     }
   };
 
-  // 3. update render
   useEffect(() => {
+    const abortController = new AbortController();
     fetchProducts();
 
-    // cleanup function
-    return () => {};
+    return () => {
+      abortController.abort();
+    };
   }, []);
-  // ...
 
   return { data, setData };
 }

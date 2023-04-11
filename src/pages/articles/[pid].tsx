@@ -1,19 +1,15 @@
-"use client";
-
 import { Meta, DefaultLayout, Header, Footer } from "@/components";
-import { ArticleContent } from "@/components/Content/ArticleContent";
+import { ArticleContent } from "@/components/molecule/Content/ArticleContent";
 import useArticles from "@/hook/use-articles";
 
 export default function Article(props: { params: string }) {
-  console.log(props);
-  const { data } = useArticles(props.params as any);
-
+  const { data = [] } = useArticles(props.params as any);
   return (
     <>
       <Meta />
       <DefaultLayout>
         <Header />
-        <ArticleContent {...(data || [])} />
+        <ArticleContent {...data} />
         <Footer />
       </DefaultLayout>
     </>

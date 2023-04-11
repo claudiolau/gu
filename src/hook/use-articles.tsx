@@ -1,17 +1,12 @@
-"use client";
-
 import { baseUrl } from "@/service/base-url";
+import { Product } from "@prisma/client";
 import { useState, useEffect } from "react";
-import { IProduct } from "../../prisma/data";
 
-export default function useArticles(props: string) {
-  // 1. Use the name state variable
-
-  //@ts-ignore
+export default function useArticles(props: { pid: string }) {
   const { pid } = props;
-  const [data, setData] = useState<IProduct[] | []>();
+  const [data, setData] = useState<Product[] | []>();
 
-  const fetchArticles = async () => {
+  const fetchArticles = async (): Promise<void> => {
     try {
       const pathParams = `/api/articles/` + pid;
 
@@ -25,21 +20,22 @@ export default function useArticles(props: string) {
       });
 
       const resp = await data.json();
-      // 2. Update state
+
       setData(resp);
     } catch (e) {
       console.error(e);
     }
   };
 
-  // 3. update render
   useEffect(() => {
+    const abortController = new AbortController();
     fetchArticles();
-    // cleanup function
-    return () => {};
+
+    return () => {
+      abortController.abort();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // ...
 
   return { data, setData };
 }

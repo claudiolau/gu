@@ -1,15 +1,16 @@
 import { DefaultLayout, Footer, Header, HomeContent } from "@/components";
-import { Meta } from "@/components/Meta";
+import { Meta } from "@/components/atoms/Meta";
 import Products from "@/hook/use-product";
 
 export default function Home() {
-  const { data } = Products();
+  const { data = [] } = Products();
+
   return (
     <>
       <Meta />
       <DefaultLayout>
         <Header />
-        <HomeContent {...(data || [])} />
+        <HomeContent {...data} />
         <Footer />
       </DefaultLayout>
     </>

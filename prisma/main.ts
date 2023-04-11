@@ -1,7 +1,7 @@
-import { prisma } from "./prisma-client";
+import { prisma } from "./config";
 import { ProductSeed } from "./seed";
 
-export async function main() {
+async function main() {
   await ProductSeed(prisma);
 }
 

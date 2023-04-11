@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
+import { Product } from "@prisma/client";
 import { FC } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { IProduct } from "../../../../prisma/data";
 
-export const ArticleContent: FC<IProduct[]> = (props) => {
+export const ArticleContent: FC<Product[]> = (props) => {
   const BuyCard = (props: { description: string; image: string }[]) => {
     return (
       <>
@@ -25,12 +26,10 @@ export const ArticleContent: FC<IProduct[]> = (props) => {
     );
   };
 
-  // fix issue on key props
+  //  @TODO fix issue on key props
+  // temp generate grid data for mock ups
   const GenerateGrid = (props: any) => {
     const genProps = Array(12).fill(props);
-    {
-      console.log(props);
-    }
 
     return (
       <>
