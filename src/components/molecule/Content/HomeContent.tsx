@@ -14,7 +14,7 @@ export const HomeContent: FC<Product[]> = (props) => {
     <section className="flex-grow bg-[#FDFBF3]">
       <Banner />
       <Hero />
-      <div className="flex flex-col items-center justify-between w-full relative max-w-7xl mx-auto text-gray-900">
+      <div className="flex flex-col items-center justify-between w-full relative  mx-auto text-gray-900 mb-8">
         <div className="text-center text-2xl text-[#4B4A46] pt-12">
           Shop for what you want faster and easier
         </div>
@@ -24,38 +24,50 @@ export const HomeContent: FC<Product[]> = (props) => {
         <div className="text-center text-3xl text-[#4B4A46] m-4 uppercase">
           SHOP BY CATEGORIES
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4 p-4 h-3/6 sm:grid-cols-3 sm:h-3/6">
           <div className="bg-white rounded-lg shadow-md">
             <img
-              src="https://www.soph.net/img/goods/L/fcrb_230010_black.jpg"
+              className="h-full w-full object-cover"
+              src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=822&q=80"
               alt="description of your image"
             />
+            <figcaption className="text-center ">Clothing</figcaption>
           </div>
           <div className="bg-white rounded-lg shadow-md">
             <img
-              src="https://www.soph.net/img/goods/L/fcrb_230010_black.jpg"
-              alt="description of your image"
+              className="h-full w-full object-cover"
+              src="https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_500,c_limit/64265cce-0cfc-4309-aa45-33835124eeaa/the-best-nike-high-top-sneakers-you-can-buy-right-now-articles-ogc.jpg"
+              alt="shoes"
             />
+            <figcaption className="text-center">Shoes</figcaption>
           </div>
           <div className="bg-white rounded-lg shadow-md">
             <img
-              src="https://www.soph.net/img/goods/L/fcrb_230010_black.jpg"
+              className="h-full w-full object-cover"
+              src="https://plus.unsplash.com/premium_photo-1673548917043-9facc637bf37?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
               alt="description of your image"
             />
+            <figcaption className="text-center">Furniture</figcaption>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white rounded-lg shadow-md p-4">
+        <div className="grid grid-cols-2 gap-4 p-4 h-3/6 sm:grid-cols-2 sm:h-3/6">
+          <div className="rounded-lg shadow-md">
             <img
-              src="https://www.soph.net/img/goods/L/fcrb_230010_black.jpg"
+              className="h-full w-full object-cover"
+              src="https://cdn.arstechnica.net/wp-content/uploads/2022/07/20220726_161534.jpg"
               alt="description of your image"
             />
+            <figcaption className="text-center mt-4 mb-4">
+              Electronics
+            </figcaption>
           </div>
-          <div className="bg-white rounded-lg shadow-md">
+          <div className="rounded-lg shadow-md">
             <img
-              src="https://www.soph.net/img/goods/L/fcrb_230010_black.jpg"
+              className="h-full w-full object-cover"
+              src="https://images.unsplash.com/photo-1545147986-a9d6f2ab03b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBsYW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
               alt="description of your image"
             />
+            <figcaption className="text-center mt-4 mb-4">Others</figcaption>
           </div>
         </div>
       </div>

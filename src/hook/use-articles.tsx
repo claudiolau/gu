@@ -35,7 +35,7 @@ export default function useArticles(props: { pid: string }) {
       abortController.abort();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [data]);
 
   return { data, setData };
 }

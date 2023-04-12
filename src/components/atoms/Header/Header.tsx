@@ -4,7 +4,7 @@ import { HamburgerIcon } from "@/assets/HamburgerIcon";
 import { LogoIcon } from "@/assets/LogoIcon";
 import { FC, useState } from "react";
 import { ListLinks, links } from "./ListofLinks";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 export const Header: FC = () => {
@@ -26,7 +26,7 @@ export const Header: FC = () => {
         </li>
       </ul>
       <nav>
-        <section className="MOBILE-MENU flex flex-row lg:hidden p-4">
+        <section className="MOBILE-MENU flex flex-row lg:hidden">
           <div
             className="HAMBURGER-ICON space-y-2 "
             onClick={() => setIsNavOpen((prev) => !prev)}
@@ -43,12 +43,12 @@ export const Header: FC = () => {
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
             <div
-              className="absolute top-0 right-0 z-[4]"
+              className="absolute top-0 right-0"
               onClick={() => setIsNavOpen(false)}
             >
               <HamburgerIcon />
             </div>
-            <ul className="relative flex flex-col items-center justify-between w-full left-0 right-0 z-[4]">
+            <ul className="relative flex flex-col items-center justify-between w-full left-0 right-0">
               {links.map(({ href, label }) => (
                 <li
                   key={href}

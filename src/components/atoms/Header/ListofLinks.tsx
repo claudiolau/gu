@@ -8,10 +8,10 @@ type props = {
 export const links = [
   { href: "/", label: "Home" },
   { href: "/articles/clothing", label: "Clothing" },
-  { href: "articles/shoes", label: "Shoes" },
-  { href: "articles/furniture", label: "Furniture" },
+  // { href: "articles/shoes", label: "Shoes" },
+  // { href: "articles/furniture", label: "Furniture" },
   { href: "/articles/electronics", label: "Electronics" },
-  { href: "articles/other", label: "other" },
+  // { href: "articles/other", label: "other" },
   { href: "/login", label: "Login" },
   { href: "/cart", label: "Cart" },
 ];

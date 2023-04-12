@@ -5,7 +5,7 @@ import { FacebookIcon, TwitterIcon, YoutubeIcon } from "@/assets";
 export const Footer: FC = () => {
   return (
     <>
-      <div className="bg-[#4B4A46] text-[#FFFFFF] p-4">
+      <div className="bg-[#4B4A46] text-[#FFFFFF]">
         <footer className="footer p-10 flex items-center justify-between w-full mx-auto relative max-w-7xl">
           <div className="text-[#FDFBF3]">
             <span className="footer-title">Services</span>
@@ -24,9 +24,9 @@ export const Footer: FC = () => {
           <div>
             <span className="footer-title">Legal</span>
             <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Cookie policy</a>
-            <a className="link link-hover">Delivery policy</a>
+            <a className="link link-hover">Privacy </a>
+            <a className="link link-hover">Cookie </a>
+            <a className="link link-hover">Delivery</a>
           </div>
         </footer>
       </div>

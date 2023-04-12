@@ -27,7 +27,7 @@ export default function useProducts() {
     return () => {
       abortController.abort();
     };
-  }, []);
+  }, [data]);
 
   return { data, setData };
 }
