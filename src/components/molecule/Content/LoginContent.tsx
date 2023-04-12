@@ -6,7 +6,7 @@ export const LoginContent: FC = () => {
 
   return (
     <>
-      <section className="flex-grow">
+      <section className="flex-grow bg-[#FDFBF3]">
         <div className="flex flex-col items-center justify-between w-full relative max-w-7xl  mx-auto pt-8 pb-8 text-gray-900 ">
           {!session ? (
             <>

@@ -11,8 +11,6 @@ export default function Home() {
       <Meta />
       <DefaultLayout>
         <Header />
-        <Banner />
-        <Hero />
         <HomeContent {...data} />
         <Footer />
       </DefaultLayout>
