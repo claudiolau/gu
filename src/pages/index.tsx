@@ -1,5 +1,6 @@
 import { DefaultLayout, Footer, Header, HomeContent, Meta } from "@/components";
 import { Banner } from "@/components/atoms/Banner/Banner";
+import { Hero } from "@/components/atoms/Hero/Hero";
 import useProducts from "@/hook/use-product";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <DefaultLayout>
         <Header />
         <Banner />
+        <Hero />
         <HomeContent {...data} />
         <Footer />
       </DefaultLayout>
