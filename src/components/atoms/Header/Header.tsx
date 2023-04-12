@@ -11,7 +11,7 @@ export const Header: FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const { asPath } = useRouter();
   return (
-    <div className="flex items-center justify-between border-gray-400 ">
+    <div className="flex items-center justify-between border-gray-400  bg-[#FDFBF3]">
       <LogoIcon />
       <ul className=" MOBILE-MENU flex flex-row lg:hidden space-x-4">
         <li className="   border-gray-400 my-8 uppercase">
@@ -25,7 +25,7 @@ export const Header: FC = () => {
           </a>
         </li>
       </ul>
-      <nav className="bg-white">
+      <nav>
         <section className="MOBILE-MENU flex flex-row lg:hidden p-4">
           <div
             className="HAMBURGER-ICON space-y-2 "
@@ -48,7 +48,7 @@ export const Header: FC = () => {
             >
               <HamburgerIcon />
             </div>
-            <ul className="relative flex flex-col items-center justify-between bg-white w-full left-0 right-0 z-[4]">
+            <ul className="relative flex flex-col items-center justify-between w-full left-0 right-0 z-[4]">
               {links.map(({ href, label }) => (
                 <li
                   key={href}

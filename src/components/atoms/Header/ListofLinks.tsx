@@ -8,7 +8,10 @@ type props = {
 export const links = [
   { href: "/", label: "Home" },
   { href: "/articles/clothing", label: "Clothing" },
+  { href: "articles/shoes", label: "Shoes" },
+  { href: "articles/furniture", label: "Furniture" },
   { href: "/articles/electronics", label: "Electronics" },
+  { href: "articles/other", label: "other" },
   { href: "/login", label: "Login" },
   { href: "/cart", label: "Cart" },
 ];
@@ -56,7 +59,7 @@ export const ListLinks: FC = () => {
         {links.map(({ href, label }) => (
           <li
             key={href}
-            className={`mr-4 uppercase border-gray-400 ${
+            className={`mr-8 uppercase border-gray-400 ${
               router.asPath === href ? "underline" : ""
             }`}
           >

@@ -8,7 +8,7 @@ export const HomeContent: FC<Product[]> = (props) => {
   //   .slice(0, 5)
   //   .map((entry) => entry[1] || "")
   return (
-    <section className="flex-grow ">
+    <section className="flex-grow bg-[#FDFBF3]">
       <div className="flex flex-col items-center justify-between w-full relative max-w-7xl mx-auto pt-8 pb-8 text-gray-900">
         <div className="grid grid-cols-3 gap-4 p-4">
           <div className="bg-white rounded-lg shadow-md p-4">
