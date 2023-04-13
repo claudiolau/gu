@@ -4,12 +4,19 @@ import { Product } from "@prisma/client";
 import { Hero } from "@/components/atoms/Hero/Hero";
 import { Banner } from "@/components/atoms/Banner/Banner";
 import Link from "next/link";
+import ParentComponent from "../Container/GridCenter";
+import { ShippingBoxIcon } from "@/assets/ShippingBoxIcon";
+import { NavigationTop } from "@/components/atoms";
 
 export const HomeContent: FC<Product[]> = (props) => {
   // to be updated
   // const mockContent = Object.entries(props)
   //   .slice(0, 5)
   //   .map((entry) => entry[1] || "")
+
+  const x = () => {
+    return <></>;
+  };
   return (
     <section className="flex-grow bg-[#FDFBF3]">
       <Banner />
@@ -70,6 +77,8 @@ export const HomeContent: FC<Product[]> = (props) => {
           </div>
         </div>
       </div>
+      <ParentComponent childComponent={ShippingBoxIcon} />
+      <ParentComponent childComponent={NavigationTop} />
     </section>
   );
 };
