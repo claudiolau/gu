@@ -1,9 +1,15 @@
-import { Meta, DefaultLayout, Header, Footer } from "@/components";
-import { ArticleContent } from "@/components/molecule/Content/ArticleContent";
+import {
+  Meta,
+  DefaultLayout,
+  Header,
+  Footer,
+  ArticleContent,
+} from "@/components";
+
 import useArticles from "@/hook/use-articles";
 
-export default function Article(props: { params: string }) {
-  const { data = [] } = useArticles(props.params as any);
+export default function Article(props: { params: { pid: string } }) {
+  const { data = [] } = useArticles(props.params);
   return (
     <>
       <Meta />

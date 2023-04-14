@@ -1,6 +1,12 @@
-import { CartContent, DefaultLayout, Header, LoginContent } from "@/components";
-import { Footer } from "@/components/atoms/Footer";
-import { Meta } from "@/components/atoms/Meta";
+import {
+  CartContent,
+  DefaultLayout,
+  Footer,
+  Header,
+  LoginContent,
+  Meta,
+} from "@/components";
+
 import { useRouter } from "next/router";
 import Custom404 from "./404";
 

@@ -1,9 +1,10 @@
-import { DefaultLayout, Footer, Header, HomeContent } from "@/components";
-import { Meta } from "@/components/atoms/Meta";
-import Products from "@/hook/use-product";
+import { DefaultLayout, Footer, Header, HomeContent, Meta } from "@/components";
+import { Banner } from "@/components/atoms/Banner/Banner";
+import { Hero } from "@/components/atoms/Hero/Hero";
+import useProducts from "@/hook/use-product";
 
 export default function Home() {
-  const { data = [] } = Products();
+  const { data = [] } = useProducts();
 
   return (
     <>
