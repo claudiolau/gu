@@ -26,7 +26,7 @@ export const Header: FC = () => {
         </li>
       </ul>
       <nav>
-        <section className="MOBILE-MENU flex flex-row lg:hidden">
+        <section className="MOBILE-MENU flex flex-row lg:hidden p-4">
           <div
             className="HAMBURGER-ICON space-y-2 "
             onClick={() => setIsNavOpen((prev) => !prev)}
