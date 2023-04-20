@@ -4,9 +4,9 @@ import { FC, PropsWithChildren } from "react";
 export const NotFoundLayout: FC<PropsWithChildren> = () => {
   return (
     <div className="flex-grow">
-      <div className="flex flex-col justify-center items-center content-center m-32">
-        <h1 className="font-bold text-4xl p-8">Page Not Found</h1>
-        <Link href="/" className="rounded bg-black text-white p-4 max-w-md">
+      <div className="m-32 flex flex-col content-center items-center justify-center">
+        <h1 className="p-8 text-4xl font-bold">Page Not Found</h1>
+        <Link href="/" className="max-w-md rounded bg-black p-4 text-white">
           Return
         </Link>
       </div>

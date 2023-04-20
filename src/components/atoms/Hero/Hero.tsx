@@ -47,11 +47,11 @@ export const Hero = () => {
             }`}
           >
             <img src={carouselItems[currentSlide].imgUrl} className="w-full" />
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <button onClick={handleClickPrev} className="btn btn-circle">
+            <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <button onClick={handleClickPrev} className="btn-circle btn">
                 ❮
               </button>
-              <button onClick={handleClickNext} className="btn btn-circle">
+              <button onClick={handleClickNext} className="btn-circle btn">
                 ❯
               </button>
             </div>

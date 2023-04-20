@@ -17,7 +17,7 @@ export const NavigationTop = () => {
   return (
     <button
       ref={buttonRef}
-      className="bg-[#FFFFFF] text-black w-1/3 border border-black p-2"
+      className="w-1/3 border border-black bg-[#FFFFFF] p-2 text-black"
       onClick={handleOnClick}
     >
       Back to Top

@@ -31,7 +31,7 @@ export const ListLinks: FC = () => {
       <ul className="flex items-center">
         <li>
           <form onSubmit={handleSearch} className="flex items-center p-4">
-            <button className="btn btn-square">
+            <button className="btn-square btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -50,7 +50,7 @@ export const ListLinks: FC = () => {
             <input
               type="text"
               placeholder="Search"
-              className="px-4 py-2 rounded-md border-gray-400"
+              className="rounded-md border-gray-400 px-4 py-2"
               value={searchTerm}
               onChange={(event) => setSearchTerm(event.target.value)}
             />
@@ -59,7 +59,7 @@ export const ListLinks: FC = () => {
         {links.map(({ href, label }) => (
           <li
             key={href}
-            className={`mr-8 uppercase border-gray-400 ${
+            className={`mr-8 border-gray-400 uppercase ${
               router.asPath === href ? "underline" : ""
             }`}
           >

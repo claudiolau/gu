@@ -21,13 +21,11 @@ export default function useProducts() {
   };
 
   useEffect(() => {
-    const abortController = new AbortController();
     fetchProducts();
-
     return () => {
-      abortController.abort();
+      setData([]);
     };
-  }, [data]);
+  }, []);
 
   return { data, setData };
 }

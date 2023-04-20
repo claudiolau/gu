@@ -6,7 +6,7 @@ type Props = {
 
 const ParentComponent: FC<Props> = ({ childComponent: ChildComponent }) => {
   return (
-    <div className="flex justify-center items-center pt-8">
+    <div className="flex items-center justify-center pt-8">
       <ChildComponent />
     </div>
   );

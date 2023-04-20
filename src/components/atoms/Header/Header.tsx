@@ -13,20 +13,20 @@ export const Header: FC = () => {
   return (
     <div className="flex items-center justify-between border-gray-400  bg-[#FDFBF3]">
       <LogoIcon />
-      <ul className=" MOBILE-MENU flex flex-row lg:hidden space-x-4">
-        <li className="   border-gray-400 my-8 uppercase">
+      <ul className=" MOBILE-MENU flex flex-row space-x-4 lg:hidden">
+        <li className="   my-8 border-gray-400 uppercase">
           <a href="/cart">
             <ProfileIcon />
           </a>
         </li>
-        <li className="   border-gray-400 my-8 uppercase m-4">
+        <li className="   m-4 my-8 border-gray-400 uppercase">
           <a href="/cart">
             <CartIcon />
           </a>
         </li>
       </ul>
       <nav>
-        <section className="MOBILE-MENU flex flex-row lg:hidden p-4">
+        <section className="MOBILE-MENU flex flex-row p-4 lg:hidden">
           <div
             className="HAMBURGER-ICON space-y-2 "
             onClick={() => setIsNavOpen((prev) => !prev)}
@@ -39,20 +39,20 @@ export const Header: FC = () => {
           <div
             className={`${
               isNavOpen ? "block" : "hidden"
-            } absolute top-4 right-4 w-full z-40 rounded-full`}
+            } absolute right-4 top-4 z-40 w-full rounded-full`}
             onClick={() => setIsNavOpen((prev) => !prev)}
           >
             <div
-              className="absolute top-0 right-0"
+              className="absolute right-0 top-0"
               onClick={() => setIsNavOpen(false)}
             >
               <HamburgerIcon />
             </div>
-            <ul className="relative flex flex-col items-center justify-between w-full left-0 right-0">
+            <ul className="relative left-0 right-0 flex w-full flex-col items-center justify-between">
               {links.map(({ href, label }) => (
                 <li
                   key={href}
-                  className={`mr-4 uppercase border-gray-400 ${
+                  className={`mr-4 border-gray-400 uppercase ${
                     asPath === href ? "underline" : ""
                   }`}
                 >
@@ -67,7 +67,7 @@ export const Header: FC = () => {
             </ul>
           </div>
         </section>
-        <ul className="DESKTOP-MENU hidden lg:flex space-x-8 ">
+        <ul className="DESKTOP-MENU hidden space-x-8 lg:flex ">
           <ListLinks />
         </ul>
       </nav>

@@ -13,12 +13,12 @@ export const ArticleContent: FC<Product[]> = (props) => {
           </figure>
           <div className="card-body">
             <h2 className="card-title">
-              <div className="badge badge-secondary">NEW</div>
+              <div className="badge-secondary badge">NEW</div>
             </h2>
             <p>{props[0] && props[0]?.description}</p>
             <div className="card-actions justify-end">
-              <div className="badge badge-outline">Fashion</div>
-              <div className="badge badge-outline">Products</div>
+              <div className="badge-outline badge">Fashion</div>
+              <div className="badge-outline badge">Products</div>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@ export const ArticleContent: FC<Product[]> = (props) => {
   return (
     <>
       <div className="flex-grow">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full relative max-w-7xl mx-auto pt-8 pb-8 text-gray-900">
+        <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 pb-8 pt-8 text-gray-900 md:grid-cols-3">
           <GenerateGrid {...props} />
         </div>
       </div>

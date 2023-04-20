@@ -1,10 +1,12 @@
 import { baseUrl } from "@/service/base-url";
 import { Product } from "@prisma/client";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 export default function useArticles(props: { pid: string }) {
   const { pid } = props;
   const [data, setData] = useState<Product[] | []>();
+  const { asPath } = useRouter();
 
   const fetchArticles = async (): Promise<void> => {
     try {
@@ -35,7 +37,7 @@ export default function useArticles(props: { pid: string }) {
       abortController.abort();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data]);
+  }, [asPath]);
 
   return { data, setData };
 }
